@@ -4,4 +4,31 @@
     --col-second: #ffffff; 
     --col-third: #e1f4f3; 
     --col-fourth: #706c61;
+    --col-first-trans: rgba(51, 51, 51, 0.3);
+}
+
+body {
+    background-image: url("./images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--col-first-trans);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.hero > h1 {
+    font-family: 'Exo 2', serif;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--col-second);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
