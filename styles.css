@@ -94,6 +94,16 @@ form > h2 {
     color: var(--col-third);
 }
 
+.form > button {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    width: calc(100vw / 3);
+    background-color: var(--col-first-trans);
+    color: var(--col-second);
+    border: 1px solid var(--col-first);
+    box-shadow: 0px 0px 2px var(--col-fourth);
+}
+
 .error {
     display: none;
 }
