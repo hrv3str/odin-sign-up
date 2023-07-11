@@ -46,6 +46,14 @@ body {
     grid-row: 1 / 2;
 }
 
+.hero > h1:before {
+    content: url("./images/box.svg");
+    height: 3rem;
+    width: auto;
+    padding: 0.5em;
+    padding-bottom: 0.2em;
+}
+
 .disclaimer-container,
 .form,
 form > h2 {
