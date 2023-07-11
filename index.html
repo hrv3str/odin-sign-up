@@ -50,7 +50,8 @@
                         id="first-name"
                         name="first-name"
                         pattern="[a-zA-Z]+([a-zA-Z'-]*[a-zA-Z]+)*"
-                        placeholder="John">
+                        placeholder="John"
+                        required>
                 </div>
                 <div class="form last-name">
                     <label for="last-name">Last Name:</label>
@@ -65,7 +66,8 @@
                     <input type="email"
                         id="email"
                         name="email"
-                        placeholder="johndoe@email.com">
+                        placeholder="johndoe@email.com"
+                        required>
                 </div>
                 <div class="form telephopne">
                     <label for="telephone">Phone number:</label>
@@ -73,21 +75,24 @@
                         id="telephone"
                         name="telephone"
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        placeholder="123-456-7890">
+                        placeholder="123-456-7890"
+                        required>
                 </div>
                 <div class="form password">
                     <label for="password">Password:</label>
                     <input type="password"
                         id="password"
                         name="password"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        required>
                 </div>
                 <div class="form conf-password">
                     <label for="conf-password">Confirm password:</label>
                     <input type="password"
                         id="conf-password"
                         name="conf-password"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                        required>
                 </div>
                 <div class="form error"
                     id="password-error">
@@ -100,6 +105,9 @@
                 </div>
             </form>
         </div>
+        <footer>
+            <p>Photo by <a target="_blank" href="https://unsplash.com/@izuddinhelmi">Izuddin Helmi Adnan</a> on <a target="_blank" href="https://unsplash.com/">Unsplash</a></p>
+        </footer>
     </div>
 </body>
 </html>
