@@ -13,6 +13,7 @@ body {
     align-items: center;
     overflow: hidden;
     background-color: var(--col-first-trans);
+    background-color: var(--col-first);
 }
 
 .bgd {
@@ -157,8 +158,12 @@ footer > p > a:hover {
     color: var(--col-third);
 }
 
-footer > p > a:visited {
-    color: var(--col-first-trans);
+input:valid {
+    box-shadow: px 0px 3px green;
+}
+
+input:invalid {
+    box-shadow: px 0px 3px red;
 }
 
 /*media queries*/
@@ -189,19 +194,29 @@ footer > p > a:visited {
         top: 0%;
     }
     form {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        margin: 0 auto;
+        gap: 1em;
     }
     .form {
-        width: calc(99vw / 3);
+        width: calc(90vw / 3);
         height: calc(100vh / 12);
-        padding: 10px;
+        padding: 1em;
+        background: linear-gradient(
+            180deg,
+            var(--col-first-trans) 0%,
+            var(--col-third) 60%,
+            var(--col-first-trans) 100%
+        );
     }
     .form > input {
         grid-row: 1 / 2;
         grid-column: 1 / 4;
-        width: 98.5%;
+        width: 90%;
+        margin: auto;
+        padding: 0 0.5em;
     }
     .form > label {
         position: relative;
@@ -211,10 +226,26 @@ footer > p > a:visited {
         margin: 0;
         width: 0;
         height: 0;
-        top: 5%;
+        top: 15%;
+        right: -35%;
     }
     h2 {
-        width: calc(100vw / 3);
+        width: 100%;
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+        height: fit-content;
+        margin: auto 0;
+    }
+    .form.submit {
+        grid-row: 5 / 6;
+        grid-column: 1 / 3;
+        margin: 0 auto;
+        width: fit-content;
+        border-radius: 0rem;
+    }
+    .form > button:hover {
+    transform: scale(1.01);
+    transition: 0.1s ease-in-out;
     }
 }
 
